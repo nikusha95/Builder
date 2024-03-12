@@ -7,5 +7,9 @@ public class Person
     //employment info
     public string? CompanyName, Position;
     public int AnnualIncome;
-    
+
+    public override string ToString()
+    {
+        return $"Address:{City},{StreetAddress},{PostCode}\n{CompanyName},{Position},{AnnualIncome}";
+    }
 }

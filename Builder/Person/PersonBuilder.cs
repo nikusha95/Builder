@@ -2,19 +2,19 @@ namespace Builder.Person;
 
 public class PersonBuilder
 {
-    protected Person _person;
-    public PersonBuilder() => new Person();
+    protected Person Person;
+    public PersonBuilder() => Person = new Person();
 
     protected PersonBuilder(Person person)
     {
-        _person = person;
+        Person = person;
     }
 
-    public PersonAddressBuilder Lives => new(_person);
-    public PersonJobBuilder Works => new(_person);
+    public PersonAddressBuilder Lives => new(Person);
+    public PersonJobBuilder Works => new(Person);
 
     public static implicit operator Person(PersonBuilder pb)
     {
-        return pb._person;
+        return pb.Person;
     }
 }

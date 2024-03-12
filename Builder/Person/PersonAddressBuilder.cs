@@ -4,24 +4,24 @@ public class PersonAddressBuilder : PersonBuilder
 {
     public PersonAddressBuilder(Person person) : base(person)
     {
-        _person = person;
+        Person = person;
     }
 
     public PersonAddressBuilder At(string streetAddress)
     {
-        _person.StreetAddress = streetAddress;
+        Person.StreetAddress = streetAddress;
         return this;
     }
 
     public PersonAddressBuilder WithPostalCode(string postCode)
     {
-        _person.PostCode = postCode;
+        Person.PostCode = postCode;
         return this;
     }
 
     public PersonAddressBuilder In(string city)
     {
-        _person.City = city;
+        Person.City = city;
         return this;
     }
 }
