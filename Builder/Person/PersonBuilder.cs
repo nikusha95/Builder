@@ -1,4 +1,4 @@
-namespace Builder.Classes;
+namespace Builder.Person;
 
 public class PersonBuilder
 {
